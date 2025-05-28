@@ -16,9 +16,4 @@ public class Solution {
         pair.swap();
         System.out.println(pair);
     }
-
-//    public Pair swap(Pair pair) {
-//        Pair c;
-//    }
-//    }
 }
