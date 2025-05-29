@@ -1,5 +1,6 @@
 package com.javarush.task.pro.task09.task0906;
 
+import java.util.Map;
 import java.util.regex.Pattern;
 
 /* 
@@ -15,15 +16,26 @@ public class Solution {
     }
 
     public static String toBinary(int decimalNumber) {
+        String toBinaryNumber = new String();
         if (decimalNumber <= 0) {
-            return null;}
-
-        return null;
+            return "";
+        }
+        while (decimalNumber != 0) {
+            toBinaryNumber = "" + decimalNumber % 2 + decimalNumber / 2;
+        }
+        return toBinaryNumber;
     }
 
     public static int toDecimal(String binaryNumber) {
-        if ( binaryNumber.equals("") || binaryNumber == null) {
-            return 0;}
+        int binaryIntNumber = 0;
+        if (binaryNumber.equals(null) || binaryNumber.equals("")) {
+            return 0;
+        }
+
+        for (int i = 0; i <binaryNumber.length(); i++) {
+            binaryIntNumber = binaryIntNumber ;
+
+        }
         return 0;
     }
 }
