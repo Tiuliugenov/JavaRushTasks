@@ -16,26 +16,28 @@ public class Solution {
     }
 
     public static String toBinary(int decimalNumber) {
-        String toBinaryNumber = new String();
         if (decimalNumber <= 0) {
             return "";
         }
+        String binaryNumber = "";
         while (decimalNumber != 0) {
-            toBinaryNumber = "" + decimalNumber % 2 + decimalNumber / 2;
+            binaryNumber = decimalNumber % 2 + binaryNumber;
+            decimalNumber = decimalNumber / 2;
         }
-        return toBinaryNumber;
+        return binaryNumber;
     }
 
     public static int toDecimal(String binaryNumber) {
-        int binaryIntNumber = 0;
-        if (binaryNumber.equals(null) || binaryNumber.equals("")) {
+        if (binaryNumber == null || binaryNumber.isEmpty()) {
             return 0;
         }
 
-        for (int i = 0; i <binaryNumber.length(); i++) {
-            binaryIntNumber = binaryIntNumber ;
-
+        int binarynumber = 0;
+        for (int i = 0; i < binaryNumber.length(); i++) {
+            int index = binaryNumber.length() - i - 1;
+            char charAt = binaryNumber.charAt(index);
+            binarynumber = binarynumber + Integer.parseInt(String.valueOf(charAt)) * (int) Math.pow(2, i);
         }
-        return 0;
+        return binarynumber;
     }
 }
