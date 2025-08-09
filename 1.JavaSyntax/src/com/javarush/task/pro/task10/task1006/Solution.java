@@ -6,6 +6,8 @@ package com.javarush.task.pro.task10.task1006;
 
 public class Solution {
     public static void main(String[] args) {
-        //напишите тут ваш код
+       ElectricCar electricCar = new ElectricCar();
+       GasCar gasCar = new GasCar();
+       HybridCar hybridCar = new HybridCar();
     }
 }
