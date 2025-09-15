@@ -16,13 +16,13 @@ public class Solution {
     }
 
     public static String toHex(String binaryNumber) {
-        String hexNumber = "";
+        String hex = "";
         if (binaryNumber == null) {
-            return hexNumber;
+            return hex;
         }
         StringBuilder temp = new StringBuilder();
         if (binaryNumber.length() % 4 == 1) {
-            temp.append("000").append(binaryNumber);
+            temp.append("000");
         } else if (binaryNumber.length() % 4 == 2) {
             temp.append("00").append(binaryNumber);
         } else if (binaryNumber.length() % 4 == 3) {
@@ -84,44 +84,45 @@ public class Solution {
         StringBuilder result = new StringBuilder();
         for (int i = 0; i < hexNumber.length(); i++) {
             String element;
-            if (hexNumber.charAt(i)=='0') {
+            if (hexNumber.charAt(i) == '0') {
                 element = "0000";
-            } else if (hexNumber.charAt(i)=='1') {
+            } else if (hexNumber.charAt(i) == '1') {
                 element = "0001";
-            } else if (hexNumber.charAt(i)=='2') {
+            } else if (hexNumber.charAt(i) == '2') {
                 element = "0010";
-            } else if (hexNumber.charAt(i)=='3') {
+            } else if (hexNumber.charAt(i) == '3') {
                 element = "0011";
-            } else if (hexNumber.charAt(i)=='4') {
+            } else if (hexNumber.charAt(i) == '4') {
                 element = "0100";
-            } else if (hexNumber.charAt(i)=='5') {
+            } else if (hexNumber.charAt(i) == '5') {
                 element = "0101";
-            } else if (hexNumber.charAt(i)=='6') {
+            } else if (hexNumber.charAt(i) == '6') {
                 element = "0110";
-            } else if (hexNumber.charAt(i)=='7') {
+            } else if (hexNumber.charAt(i) == '7') {
                 element = "0111";
-            } else if (hexNumber.charAt(i)=='8') {
+            } else if (hexNumber.charAt(i) == '8') {
                 element = "1000";
-            } else if (hexNumber.charAt(i)=='9') {
+            } else if (hexNumber.charAt(i) == '9') {
                 element = "1001";
-            } else if (hexNumber.charAt(i)=='a') {
+            } else if (hexNumber.charAt(i) == 'a') {
                 element = "1010";
-            } else if (hexNumber.charAt(i)=='b') {
+            } else if (hexNumber.charAt(i) == 'b') {
                 element = "1011";
-            } else if (hexNumber.charAt(i)=='c') {
+            } else if (hexNumber.charAt(i) == 'c') {
                 element = "1100";
-            } else if (hexNumber.charAt(i)=='d') {
+            } else if (hexNumber.charAt(i) == 'd') {
                 element = "1101";
-            } else if (hexNumber.charAt(i)=='e') {
+            } else if (hexNumber.charAt(i) == 'e') {
                 element = "1110";
-            } else if (hexNumber.charAt(i)=='f') {
+            } else if (hexNumber.charAt(i) == 'f') {
                 element = "1111";
             } else {
                 result.setLength(0);
                 break;
             }
             result.append(element);
-        }return result.toString();
+        }
+        return result.toString();
     }
 }
 
