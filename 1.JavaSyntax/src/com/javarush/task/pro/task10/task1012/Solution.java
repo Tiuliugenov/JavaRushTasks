@@ -15,18 +15,16 @@ public class Solution {
     }
 
     public static void executeDefragmentation(String[] array) {
+       String [] temp = new String[array.length];
+       int j =0;
         for (int i = 0; i < array.length; i++) {
-            if (array[i] == null) {
-                for (int j = i + 1; j < array.length; j++) {
-                    array[j - 1] = array[j];
-                } array[array.length-1] = null;
-                if (array[i] == null){
-                    break;
-                }else
-                i--;
+            if (array[i] != null){
+                temp[j] = array[i];
+                j++;
             }
         }
+        for (int i = 0; i < array.length; i++) {
+            array[i] = temp[i];
+        }
     }
-
 }
-
